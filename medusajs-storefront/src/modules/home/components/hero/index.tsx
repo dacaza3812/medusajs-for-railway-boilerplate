@@ -1,5 +1,6 @@
 import { ShoppingCartSolid } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
+import { ModeToggle } from "components/toggle";
 import Link from 'next/link'
 const dotenv = require("dotenv");
 const STORE = process.env.NEXT_PUBLIC_BASE_URL
@@ -23,6 +24,7 @@ const Hero = () => {
            We have the solution
           </Heading>
         </span>
+          <ModeToggle/>
         <Link  href={`${STORE}/${REGION}/store`}>
         <Button variant="secondary">
             <ShoppingCartSolid />
