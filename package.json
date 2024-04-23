@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "medusa-payment-stripe": "^6.0.9"
+  }
+}
