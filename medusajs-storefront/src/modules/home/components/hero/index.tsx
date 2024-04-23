@@ -1,5 +1,9 @@
-import { Github } from "@medusajs/icons"
+import { ShoppingCartSolid } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
+import Link from 'next/link'
+const dotenv = require("dotenv");
+const STORE = process.env.NEXT_PUBLIC_BASE_URL
+const REGION = process.env.NEXT_PUBLIC_DEFAULT_REGION
 
 const Hero = () => {
   return (
@@ -10,26 +14,24 @@ const Hero = () => {
             level="h1"
             className="text-3xl leading-10 text-ui-fg-base font-normal"
           >
-            Haciendo el primer commit de prueba
+            Are you looking for products for your family in Cuba?
           </Heading>
           <Heading
             level="h2"
             className="text-3xl leading-10 text-ui-fg-subtle font-normal"
           >
-            Need help customizing your store?
+           We have the solution
           </Heading>
         </span>
-        <a
-          href="https://funkyton.com/tutorial-customize-your-medusajs-webshop-storefron/"
-          target="_blank"
-        >
-          <h1 style={{ textDecoration: "underline" }}>
-            Visit the tutorial
-          </h1>
-        </a>
+        <Link  href={`${STORE}/${REGION}/store`}>
+        <Button variant="secondary">
+            <ShoppingCartSolid />
+          Visit our store for Cuba
+          </Button>
+        </Link>
       </div>
     </div>
   )
 }
-
+// NEXT_PUBLIC_BASE_URL
 export default Hero
